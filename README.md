@@ -1,3 +1,56 @@
+# 目录结构
+├── .gitlab                 # 模板文件
+├── .vscode                 # 项目配置
+├── build                   # 构建资源  
+│    ├── Dockerfile            
+│    └── nginx.conf         
+├── docs                    # 项目文档
+├── public                  # 公开资源
+├── scripts                 # 项目脚本
+├── src                     
+│    ├── assets             # 全局资源
+│    ├── components         # 全局组件
+│    ├── constants          # 全局常量
+│    ├── cores              # 全局核心方法
+│    ├── hooks              # 全局 Hooks
+│    ├── layouts            # 布局组件
+│    ├── models             # 全局模型
+│    ├── monitors           # 全局监控
+│    ├── pages              # 页面目录（内部可以嵌套）
+│    │    ├── dashboard         
+│    │    │    ├── components # 可复用组件
+│    │    │    ├── constants  # 可复用常量
+│    │    │    ├── models     # 可复用模型
+│    │    │    ├── services   # 可复用服务
+│    │    │    ├── pages      # 页面级组件（如果有必要可以继续往下嵌套）
+│    │    │    ├── styles     # 可复用样式
+│    │    │    ├── utils      # 可复用样式
+│    │    │    └── index.tsx  # 入口组件
+│    │    └── settings              
+│    ├── services           # 全局服务
+│    ├── stores             # 全局状态
+│    ├── styles             # 全局样式
+│    │     └── global.less  
+│    ├── types              # 全局类型（需要引用）
+│    ├── utils              # 全局工具函数
+│    │    ├── day.ts          # 时间处理
+│    │    ├── http.ts         # 请求处理
+│    │    └── storage.ts      # 存储处理
+│    ├── global.d.ts        # 全局类型（无需引用）
+│    ├── index.html.ejs     # 入口模版
+│    └── index.tsx          # 入口文件
+├── .env                    # 全局环境变量
+├── .eslintignore           
+├── .eslintrc.js            
+├── .gitlab-ci.yml         
+├── .prettierrc            
+├── .stylelintrc.js         
+├── .yarnrc               
+├── package.json
+├── tsconfig.json
+├── bixi.config.ts          # 应用配置信息
+└── yarn.lock               # 必须使用 git 提交 .lock 文件
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
