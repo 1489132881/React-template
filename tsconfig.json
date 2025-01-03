@@ -17,10 +17,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  // 不指定 include 可以让项目更灵活，自动包含所有相关的 TypeScript 文件
+  "exclude": ["node_modules", "dist"]
 }
