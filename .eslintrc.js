@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   extends: [
     'eslint:recommended', // 使用 ESLint 推荐的规则集
     'plugin:react/recommended', // 使用 React 推荐的规则集
