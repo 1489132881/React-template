@@ -1,3 +1,7 @@
+import path from 'node:path';
+
+import { fileURLToPath } from 'node:url';
+
 import { fixupPluginRules } from '@eslint/compat';
 import { FlatCompat } from '@eslint/eslintrc';
 import { default as js, default as pluginJs } from '@eslint/js';
@@ -5,8 +9,7 @@ import _import from 'eslint-plugin-import';
 import prettier from 'eslint-plugin-prettier';
 import pluginReact from 'eslint-plugin-react';
 import globals from 'globals';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+
 import tseslint from 'typescript-eslint';
 
 const __filename = fileURLToPath(import.meta.url);
