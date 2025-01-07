@@ -23,11 +23,13 @@
   },
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
-    "source.fixAll.tslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
+    "source.fixAll.eslint": "explicit"
   },
-  "eslint.workingDirectories": [{ "directory": "./", "changeProcessCWD": true }],
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": true,
+  //   "source.fixAll.tslint": "always",
+  //   "source.fixAll.stylelint": "always"
+  // },
   "[markdown]": {
     "editor.formatOnSave": false
   },
@@ -72,7 +74,9 @@
     "domtoimage"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "i18n-ally.localesPaths": ["packages/common/src/constants/locales"],
   "workbench.activityBar.orientation": "vertical", // 资源管理器放在右边
-  "default_line_ending": "unix" // 默认换行符为unix风格
+  "default_line_ending": "unix", // 默认换行符为unix风格
+  "editor.fontSize": 15,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.codeActionsOnSave.rules": null
 }
