@@ -25,11 +25,10 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  ...compat.extends('eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'),
+  ...compat.extends('plugin:@typescript-eslint/recommended', 'eslint:recommended', 'prettier'),
   {
     plugins: {
       import: fixupPluginRules(_import),
-      //   'unused-imports': unusedImports,
       prettier
     },
     settings: {
@@ -71,7 +70,7 @@ export default [
       'no-useless-return': 'error', // 禁止无用的返回语句
       'no-console': ['warn', { allow: ['warn', 'error'] }], // 只允许使用 console.warn 和 console.error
       '@typescript-eslint/no-unused-vars': [
-        'warn',
+        'error',
         {
           vars: 'all', // 检查所有变量
           varsIgnorePattern: '^_', // 忽略以 _ 开头的变量
@@ -79,6 +78,9 @@ export default [
           argsIgnorePattern: '^_' // 忽略以 _ 开头的参数
         }
       ],
+      '@typescript-eslint/naming-convention': 'off', // 关闭命名约定规则
+      '@typescript-eslint/no-explicit-any': ['error'], // 禁止使用 any 类型
+      'linebreak-style': ['error', 'unix'], // 使用 Unix 风格的换行符
       'import/order': [
         'error',
         {
@@ -91,11 +93,7 @@ export default [
             orderImportKind: 'ignore' // 忽略 import 类型的排序
           }
         }
-      ],
-      '@typescript-eslint/naming-convention': 'off', // 关闭命名约定规则
-      '@typescript-eslint/no-explicit-any': ['error'], // 禁止使用 any 类型
-      'linebreak-style': ['error', 'unix'] // 使用 Unix 风格的换行符
-      // 其他自定义规则
+      ]
     }
   }
 ];

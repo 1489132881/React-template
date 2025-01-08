@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -28,8 +30,7 @@
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "prepare": "husky install",
-    "commitlint": "commitlint --edit",
-    "check-unused-exports": "ts-unused-exports tsconfig.json"
+    "commitlint": "commitlint --edit"
   },
   "eslintConfig": {
     "extends": [
@@ -74,7 +75,6 @@
     "lint-staged": "^15.3.0",
     "prettier": "^3.4.2",
     "ts-loader": "^9.5.1",
-    "ts-unused-exports": "^11.0.1",
     "typescript-eslint": "^8.19.0",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
@@ -82,8 +82,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint",
-      "npm run check-unused-exports"
+      "eslint --fix"
     ]
   }
 }

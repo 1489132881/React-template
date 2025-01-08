@@ -10,8 +10,6 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
   "explorer.confirmDelete": false,
   "git.ignoreLegacyWarning": true,
-  "terminal.integrated.rendererType": "dom",
-  "terminal.integrated.shell.osx": "/bin/zsh",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "files.watcherExclude": {
@@ -24,14 +22,8 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "always"
   },
-
-  // "editor.codeActionsOnSave": {
-  //   "source.fixAll.eslint": true,
-  //   "source.fixAll.tslint": "always",
-  //   "source.fixAll.stylelint": "always"
-  // },
   "[markdown]": {
     "editor.formatOnSave": false
   },
@@ -71,13 +63,12 @@
     "vitejs",
     "webos",
     "wechat",
-    "Xuan",
-    "Xuanwu",
-    "domtoimage"
+    "domtoimage",
+    "antd",
+    "Sider"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "workbench.activityBar.orientation": "vertical", // 资源管理器放在右边
-  "default_line_ending": "unix", // 默认换行符为unix风格
+  "workbench.activityBar.orientation": "vertical",
   "editor.fontSize": 15,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.codeActionsOnSave.rules": null
