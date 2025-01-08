@@ -1,0 +1,75 @@
+{
+  "editor.rulers": [150],
+  "html.format.wrapLineLength": 150,
+  "html.format.endWithNewline": true,
+  "explorer.confirmDragAndDrop": false,
+  "html.format.wrapAttributes": "auto",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "explorer.confirmDelete": false,
+  "git.ignoreLegacyWarning": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/dist/*/**": true,
+    "**/coverage/*/**": true
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "always"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true
+  },
+  "files.associations": {
+    "*.conf": "nginx",
+    "*.json": "jsonc",
+    ".prettierrc": "json",
+    ".stylelintrc": "json",
+    ".htmlhintrc": "json"
+  },
+  "cSpell.words": [
+    "ahooks",
+    "antd",
+    "Appauth",
+    "Cascader",
+    "Dingtalk",
+    "dockerhub",
+    "echarts",
+    "geekblue",
+    "Lexicals",
+    "mindmap",
+    "pangufirstedition",
+    "Sider",
+    "stylelint",
+    "Tuwen",
+    "Unmount",
+    "vite",
+    "vitejs",
+    "webos",
+    "wechat",
+    "domtoimage",
+    "antd",
+    "Sider"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "workbench.activityBar.orientation": "vertical",
+  "editor.fontSize": 15,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.codeActionsOnSave.rules": null
+}
