@@ -1,11 +1,4 @@
 {
-	"recommendations": [
-		"stylelint.vscode-stylelint",
-		"wayou.vscode-todo-highlight",
-		"esbenp.prettier-vscode",
-		"streetsidesoftware.code-spell-checker"
-	],
-	"unwantedRecommendations": [
-    	"dbaeumer.vscode-eslint"
-	]
+  "recommendations": ["stylelint.vscode-stylelint", "wayou.vscode-todo-highlight", "esbenp.prettier-vscode", "streetsidesoftware.code-spell-checker"],
+  "unwantedRecommendations": ["dbaeumer.vscode-eslint"]
 }

@@ -16,6 +16,8 @@
     "ahooks": "^3.8.1",
     "antd": "^5.20.5",
     "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "lodash": "^4.17.21",
     "mobx": "^6.13.2",
     "mobx-react-lite": "^4.0.7",
     "react": "^18.3.1",
@@ -30,7 +32,8 @@
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "prepare": "husky install",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "svgr": "svgr -d src/assets/icons/ src/assets/svg/"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +62,8 @@
     "@eslint/compat": "^1.2.4",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.17.0",
+    "@svgr/cli": "^8.1.0",
+    "@types/lodash": "^4.17.14",
     "@typescript-eslint/eslint-plugin": "^8.19.0",
     "@typescript-eslint/parser": "^8.19.0",
     "babel-loader": "^9.2.1",

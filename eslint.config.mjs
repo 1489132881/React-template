@@ -42,7 +42,8 @@ export default [
         ...globals.browser,
         ...globals.commonjs,
         ...globals.node,
-        $ref: true
+        $ref: true,
+        ISafeAny: true
       },
 
       ecmaVersion: 2021,
@@ -63,14 +64,14 @@ export default [
       indent: ['error', 2], // 使用两个空格进行缩进
       quotes: ['error', 'single'], // 使用单引号
       'no-var': 'error', // 禁止使用 var
-      'no-extra-parens': 'error', // 禁止使用多余的括号
       'no-multiple-empty-lines': ['error', { max: 1 }], // 允许最多1行空白行
       'no-trailing-spaces': 'error', // 禁止行尾空格
       'no-unreachable': 'error', // 禁止无法到达的代码
       'no-useless-return': 'error', // 禁止无用的返回语句
       'no-console': ['warn', { allow: ['warn', 'error'] }], // 只允许使用 console.warn 和 console.error
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
-        'error',
+        'warn',
         {
           vars: 'all', // 检查所有变量
           varsIgnorePattern: '^_', // 忽略以 _ 开头的变量

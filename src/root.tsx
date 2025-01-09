@@ -1,8 +1,8 @@
 import React from 'react';
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 
-import './App.css';
 import { ROUTES } from './constants';
+import { Frontend } from './pages/p1';
 import { Backend } from './pages/p2';
 export default function Root() {
   return <AppRooter />;
@@ -13,7 +13,8 @@ const AppRooter = () => {
     <>
       <HashRouter>
         <Routes>
-          <Route path='/frontend' element={<Navigate to={ROUTES.Frontend} />} />
+          <Route path='/' element={<Navigate to={ROUTES.Frontend} />} />
+          <Route path='/frontend' element={<Frontend />} />
           <Route path='/backend' element={<Backend />} />
         </Routes>
       </HashRouter>
