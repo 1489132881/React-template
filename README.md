@@ -19,4 +19,6 @@
 
 其它更多响应状态码请查阅 [MDN Web Docs](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status)
 
+# 每次加入了一个新 SVG 文件或者修改了原有的 SVG 文件时，需要再次运行 npm run svgr 命令。
+
 
