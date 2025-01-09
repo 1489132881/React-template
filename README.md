@@ -1,4 +1,42 @@
 
+# 1 安装依赖
+
+```
+npm install
+```
+
+```
+yarn install
+```
+
+
+
+# 2 启动项目
+
+```
+npm start
+```
+
+```
+yarn start
+```
+
+
+
+# 手动将svg转为.tsx
+
+```
+npm run svgr  
+```
+
+
+
+# 修复eslint
+
+```
+npx eslint . --fix
+```
+
 # 目录结构
 
 ![image](https://github.com/user-attachments/assets/ef8d8878-a6dc-4db1-a9c7-59477a7d5325)
