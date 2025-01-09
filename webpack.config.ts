@@ -23,12 +23,31 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.js$/, // 匹配 .js 文件
+        use: 'babel-loader', // 使用 babel-loader（如果需要转译）
+        exclude: /node_modules/
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
       {
         test: /\.svg$/,
-        use: 'file-loader'
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              template: ({ template }: { template: ISafeAny }, opts: ISafeAny, { imports, componentName, props, jsx }: ISafeAny) => template.ast`
+                ${imports}
+                const ${componentName} = (${props}) => {
+                  return ${jsx};
+                };
+                export default ${componentName};
+              `,
+              memo: true
+            }
+          }
+        ]
       }
     ]
   },
@@ -46,10 +65,11 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist')
     },
-    compress: true,
-    port: 9000,
+    compress: true, // 启用 gzip 压缩
+    port: process.env.PORT, // 指定开发服务器端口
     hot: true // 启用热模块替换
   },
   mode: 'development', // 或 'production'，根据需要选择
   devtool: 'source-map' // 生成 source map 以便于调试
+  // exclude: ['src/typing']
 };
