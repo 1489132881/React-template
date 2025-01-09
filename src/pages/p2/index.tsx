@@ -53,7 +53,8 @@ export function Backend() {
               padding: 24,
               minHeight: 360,
               background: colorBgContainer,
-              borderRadius: borderRadiusLG
+              borderRadius: borderRadiusLG,
+              color: 'var(--project-grey-14)'
             }}
           >
             Bill is a cat.

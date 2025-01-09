@@ -2,6 +2,8 @@ import path from 'node:path';
 
 import { fileURLToPath } from 'node:url';
 
+import aoviz from '@aoviz/eslint-plugin';
+
 import { fixupPluginRules } from '@eslint/compat';
 import { FlatCompat } from '@eslint/eslintrc';
 import { default as js, default as pluginJs } from '@eslint/js';
@@ -11,6 +13,8 @@ import pluginReact from 'eslint-plugin-react';
 import globals from 'globals';
 
 import tseslint from 'typescript-eslint';
+
+import { COLOR_MAP } from './src/styles/variables.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,6 +32,7 @@ export default [
   ...compat.extends('plugin:@typescript-eslint/recommended', 'eslint:recommended', 'prettier'),
   {
     plugins: {
+      '@aoviz': aoviz,
       import: fixupPluginRules(_import),
       prettier
     },
@@ -63,6 +68,8 @@ export default [
       semi: ['error', 'always'], // 语句末尾使用分号
       indent: ['error', 2], // 使用两个空格进行缩进
       quotes: ['error', 'single'], // 使用单引号
+      '@aoviz/build-in-color': ['error', COLOR_MAP],
+      '@aoviz/naming-convention': ['warn'], // 以 set 为开始的函数，必须包含入参。以 get 为开始的函数，必须包含返回值。
       'no-var': 'error', // 禁止使用 var
       'no-multiple-empty-lines': ['error', { max: 1 }], // 允许最多1行空白行
       'no-trailing-spaces': 'error', // 禁止行尾空格
