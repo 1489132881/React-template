@@ -21,8 +21,7 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <StyledHeader>
-      Header <div onClick={() => navigate(ROUTES.Backend)}>进入后台</div>
-      <div style={{ display: 'flex', gap: 10, alignItems: 'center', justifyContent: 'center' }}>
+      <div onClick={() => navigate(ROUTES.Backend)} style={{ display: 'flex', gap: 10, alignItems: 'center', justifyContent: 'center' }}>
         <LogoIcon width={100} height={100} />
         <GiftIcon width={100} height={100} />
         <SnowManIcon width={100} height={100} />

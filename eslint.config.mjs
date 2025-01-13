@@ -69,7 +69,6 @@ export default [
       indent: ['error', 2], // 使用两个空格进行缩进
       quotes: ['error', 'single'], // 使用单引号
       '@aoviz/build-in-color': ['error', COLOR_MAP],
-      '@aoviz/naming-convention': ['warn'], // 以 set 为开始的函数，必须包含入参。以 get 为开始的函数，必须包含返回值。
       'no-var': 'error', // 禁止使用 var
       'no-multiple-empty-lines': ['error', { max: 1 }], // 允许最多1行空白行
       'no-trailing-spaces': 'error', // 禁止行尾空格

@@ -1,4 +1,13 @@
 {
-  "recommendations": ["stylelint.vscode-stylelint", "wayou.vscode-todo-highlight", "esbenp.prettier-vscode", "streetsidesoftware.code-spell-checker"],
+  "recommendations": [
+    "eamodio.gitlens",
+    "bradlc.vscode-tailwindcss",
+    "octref.vetur",
+    "alefragnani.Bookmarks",
+    "stylelint.vscode-stylelint",
+    "wayou.vscode-todo-highlight",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker"
+  ],
   "unwantedRecommendations": ["dbaeumer.vscode-eslint"]
 }
