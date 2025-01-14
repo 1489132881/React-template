@@ -32,7 +32,8 @@ const Header = () => {
 };
 
 const Content = () => {
-  return <div>Content</div>;
+  const navigate = useNavigate();
+  return <div onClick={() => navigate(ROUTES.Login)}>登录</div>;
 };
 
 const StyledHeader = styled.div`

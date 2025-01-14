@@ -1,4 +1,5 @@
 export const ROUTES = {
   Frontend: '/frontend',
-  Backend: '/backend'
+  Backend: '/backend',
+  Login: '/login'
 };
