@@ -1,8 +1,14 @@
 import path from 'path';
 
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { fileURLToPath } from 'url';
 
-module.exports = {
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import type { Configuration } from 'webpack';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const config: Configuration = {
   entry: './src/index.tsx', // 使用.tsx文件作为入口
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -61,15 +67,9 @@ module.exports = {
       }
     })
   ],
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist')
-    },
-    compress: true, // 启用 gzip 压缩
-    port: process.env.PORT, // 指定开发服务器端口
-    hot: true // 启用热模块替换
-  },
   mode: 'development', // 或 'production'，根据需要选择
   devtool: 'source-map' // 生成 source map 以便于调试
   // exclude: ['src/typing']
 };
+
+export default config;
